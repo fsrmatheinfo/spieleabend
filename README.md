@@ -11,4 +11,5 @@ docker-compose up -d
 
 ### Games/Ports
 
-- Sample: [`localhost:4000`](http://localhost:4000)
+- [Cards Against Humanity](https://github.com/uni-halle-fsr-mathe-info/spieleabend-cards-against-humanity): [`localhost:40001`](http://localhost:40001)
+- [Pictionary](https://github.com/uni-halle-fsr-mathe-info/spieleabend-pictionary): [`localhost:40002`](http://localhost:40002)
