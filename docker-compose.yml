@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cards-against-humanity:
+    build: cards-against-humanity
+    ports:
+    - "40001:8080"
+  pictionary:
+    build: pictionary
+    ports:
+    - "40002:8080"
