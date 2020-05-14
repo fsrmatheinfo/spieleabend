@@ -14,7 +14,6 @@ RUN mvn war:war
 
 
 FROM tomcat:7.0-jdk8
-ADD sample.war $CATALINA_HOME/webapps/sample.war
 COPY --from=build /app/target/ZY.war $CATALINA_HOME/webapps/ROOT.war
 EXPOSE 8080
 ENTRYPOINT ["catalina.sh", "run"]
