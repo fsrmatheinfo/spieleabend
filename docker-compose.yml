@@ -1,8 +1,6 @@
 version: '3'
 services:
   cards-against-humanity:
-    # TODO: Create a reliable build.
-#    build: cards-against-humanity
     image: emcniece/dockeryourxyzzy:4
     restart: always
     ports:
@@ -17,13 +15,42 @@ services:
     restart: always
     ports:
     - "40003:5000"
+  chess:
+    build: chess
+    restart: always
+    ports:
+    - "40004:8080"
+  catan:
+    build: catan
+    restart: always
+    ports:
+    - "40005:4567"
+  cards-against-humanity-server:
+    image: ghcr.io/lattyware/massivedecks/server@sha256:052fd00924b982d7a8b272d1d2ac7f788c57cd9feedf8ef67cc0a179e17a67ce
+    restart: always
+    networks:
+    - cards-against-humanity
+  cards-against-humanity-client:
+    image: ghcr.io/lattyware/massivedecks/client@sha256:83f69ae4afb2cc183c131e603a79f8903514520aba90d69d657e643788934562
+    restart: always
+    networks:
+    - cards-against-humanity
+    links:
+      - "cards-against-humanity-server:server"
+    ports:
+    - "40006:8080"
+  spyfall:
+    build: spyfall
+    restart: always
+    ports:
+    - "40007:3000"
+  agar-io:
+    build: agar-io
+    restart: always
+    ports:
+    - "40008:3000"
 #  codenames:
 #    build: codenames
-#    restart: always
-#    ports:
-#    - "4000x:8080"
-#  spyfall:
-#    build: spyfall
 #    restart: always
 #    ports:
 #    - "4000x:8080"
@@ -37,13 +64,6 @@ services:
 #    restart: always
 #    ports:
 #    - "4000x:8080"
-#  agar-io:
-#    build: agar-io
-#    restart: always
-#    ports:
-#    - "4000x:8080"
-#  catan:
-#    build: catan
-#    restart: always
-#    ports:
-#    - "4000x:8080"
+
+networks:
+  cards-against-humanity:
