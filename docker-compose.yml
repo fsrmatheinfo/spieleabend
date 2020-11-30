@@ -1,7 +1,9 @@
 version: '3'
 services:
   cards-against-humanity:
-    build: cards-against-humanity
+    # TODO: Create a reliable build.
+#    build: cards-against-humanity
+    image: emcniece/dockeryourxyzzy:4
     restart: always
     ports:
     - "40001:8080"
@@ -10,3 +12,38 @@ services:
     restart: always
     ports:
     - "40002:8080"
+  battleship:
+    build: battleship
+    restart: always
+    ports:
+    - "40003:5000"
+#  codenames:
+#    build: codenames
+#    restart: always
+#    ports:
+#    - "4000x:8080"
+#  spyfall:
+#    build: spyfall
+#    restart: always
+#    ports:
+#    - "4000x:8080"
+#  kung-fu-chess:
+#    build: kung-fu-chess
+#    restart: always
+#    ports:
+#    - "4000x:8080"
+#  fake-artist:
+#    build: fake-artist
+#    restart: always
+#    ports:
+#    - "4000x:8080"
+#  agar-io:
+#    build: agar-io
+#    restart: always
+#    ports:
+#    - "4000x:8080"
+#  catan:
+#    build: catan
+#    restart: always
+#    ports:
+#    - "4000x:8080"
