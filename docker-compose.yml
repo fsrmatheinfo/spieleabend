@@ -52,7 +52,10 @@ services:
     ports:
     - "40008:3000"
   agar-io-cigar:
-    build: agar-io/cigar
+    build:
+      context: agar-io/cigar
+      args:
+        OGAR_SERVER: "localhost:40010"
     restart: always
     depends_on:
       - agar-io-ogar
@@ -61,8 +64,6 @@ services:
   agar-io-ogar:
     build: agar-io/ogar
     restart: always
-    environment:
-      OGAR_SERVER: "localhost:40010"
     ports:
     - "40010:443"
 #  codenames:
