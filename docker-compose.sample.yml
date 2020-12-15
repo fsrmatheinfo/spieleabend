@@ -1,0 +1,6 @@
+version: '3'
+services:
+  agar-io-cigar:
+    build:
+      args:
+        OGAR_SERVER: "HOSTNAME"
