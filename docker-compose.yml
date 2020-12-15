@@ -37,6 +37,8 @@ services:
     - cards-against-humanity
     links:
       - "cards-against-humanity-server:server"
+    depends_on:
+      - cards-against-humanity-server
     ports:
     - "40006:8080"
   spyfall:
@@ -49,6 +51,20 @@ services:
     restart: always
     ports:
     - "40008:3000"
+  agar-io-cigar:
+    build: agar-io/cigar
+    restart: always
+    depends_on:
+      - agar-io-ogar
+    ports:
+    - "40009:3000"
+  agar-io-ogar:
+    build: agar-io/ogar
+    restart: always
+    environment:
+      OGAR_SERVER: "localhost:40010"
+    ports:
+    - "40010:443"
 #  codenames:
 #    build: codenames
 #    restart: always
