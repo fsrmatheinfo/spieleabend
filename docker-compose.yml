@@ -66,13 +66,13 @@ services:
     restart: always
     ports:
     - "40010:443"
+  kung-fu-chess:
+    build: kung-fu-chess
+    restart: always
+    ports:
+    - "40011:8080"
 #  codenames:
 #    build: codenames
-#    restart: always
-#    ports:
-#    - "4000x:8080"
-#  kung-fu-chess:
-#    build: kung-fu-chess
 #    restart: always
 #    ports:
 #    - "4000x:8080"
