@@ -48,7 +48,8 @@ The games run on [ports](#games) 40001 to 40011 on `localhost`.
   Apache License 2.0
 - [Kung-Fu Chess](https://github.com/PetterS/realtimechess):
   [`localhost:40011`](http://localhost:40011)
-  
+  GPL-3.0 License
+
 If you're missing your favorite game and a web clone is available under an open license, we're happy to accept [whishes](https://github.com/fsrmatheinfo/spieleabend/issues) and [pull requests](https://github.com/fsrmatheinfo/spieleabend/pulls).
 
 ## Development

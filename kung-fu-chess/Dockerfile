@@ -2,7 +2,7 @@ FROM alpine/git:v2.26.2 AS clone
 RUN git config --global advice.detachedHead false
 RUN git clone https://github.com/PetterS/realtimechess.git /app
 WORKDIR /app
-RUN git checkout 1ecc27faef785373a78df6b2563fb9d193eece4f
+RUN git checkout a24c109af441454b1c678e9906f31cec9ba56b7b
 RUN rm -rf .git
 
 
