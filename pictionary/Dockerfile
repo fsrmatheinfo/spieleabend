@@ -2,7 +2,7 @@ FROM alpine/git:v2.26.2 AS clone
 RUN git config --global advice.detachedHead false
 RUN git clone https://github.com/scribble-rs/scribble.rs.git /app
 WORKDIR /app
-RUN git checkout 5db2d354c3e79deeb9b20fdd9ae313a7ccdaac3d
+RUN git checkout 5819ee114f4f24a7e072ea15b61e1befea0e216a
 RUN rm -rf .git
 
 
