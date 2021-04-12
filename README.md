@@ -8,7 +8,7 @@ To start all game servers simply run:
 ```shell script
 docker-compose up -d
 ```
-The games run on [ports](#games) 40001 to 40011 on `localhost`.
+The games run on [ports](#games) 40001 to 40013 on `localhost`.
 
 ## Games
 
@@ -49,8 +49,12 @@ The games run on [ports](#games) 40001 to 40011 on `localhost`.
 - [Kung-Fu Chess](https://github.com/PetterS/realtimechess):
   [`localhost:40011`](http://localhost:40011)
   GPL-3.0 License
+- [Codenames](https://github.com/jbowens/codenames):
+  [`localhost:40012`](http://localhost:40012)
+- [Werewolf](https://github.com/AlecM33/Werewolf):
+  [`localhost:40013`](http://localhost:40013)
 
-If you're missing your favorite game and a web clone is available under an open license, we're happy to accept [whishes](https://github.com/fsrmatheinfo/spieleabend/issues) and [pull requests](https://github.com/fsrmatheinfo/spieleabend/pulls).
+If you're missing your favorite game, and a web clone is available under an open license, we're happy to accept [whishes](https://github.com/fsrmatheinfo/spieleabend/issues) and [pull requests](https://github.com/fsrmatheinfo/spieleabend/pulls).
 
 ## Development
 

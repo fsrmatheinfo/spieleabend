@@ -71,16 +71,16 @@ services:
     restart: always
     ports:
     - "40011:8080"
-#  codenames:
-#    build: codenames
-#    restart: always
-#    ports:
-#    - "4000x:8080"
-#  fake-artist:
-#    build: fake-artist
-#    restart: always
-#    ports:
-#    - "4000x:8080"
+  codenames:
+    build: codenames
+    restart: always
+    ports:
+    - "40012:9091"
+  werewolf:
+    build: werewolf
+    restart: always
+    ports:
+    - "40013:5000"
 
 networks:
   cards-against-humanity:
