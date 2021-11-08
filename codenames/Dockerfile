@@ -16,9 +16,9 @@ RUN apk add gcc musl-dev \
 FROM node:16.13.0-alpine AS frontend
 COPY --from=clone /app /app
 WORKDIR /app/frontend
+RUN apk add python3 build-base
 RUN npm install -g parcel-bundler \
-    && npm install
-RUN npm audit fix\
+    && npm install \
     && sh build.sh
 
 
