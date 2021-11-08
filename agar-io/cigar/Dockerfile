@@ -11,9 +11,9 @@ EXPOSE 3000
 ENV NPM_CONFIG_LOGLEVEL info
 WORKDIR /app
 COPY --from=clone /app/app/package*.json /app/
-RUN yarn install
+RUN yarn install --ignore-engines
 COPY --from=clone /app/app /app
 ARG OGAR_SERVER="localhost:443"
 RUN sed -i s/localhost:443/$OGAR_SERVER/g web/index.html && \
     sed -i s/'Local 443'/Spieleabend/g web/index.html
-CMD ["yarn", "start"]
+CMD ["node", "webserver.js"]
