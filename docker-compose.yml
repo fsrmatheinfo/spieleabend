@@ -1,7 +1,7 @@
 version: '3'
 services:
   cards-against-humanity:
-    image: emcniece/dockeryourxyzzy:3
+    image: emcniece/dockeryourxyzzy:4
     restart: always
     ports:
     - "40001:8080"
