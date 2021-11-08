@@ -10,6 +10,5 @@ FROM node:10.23.0-alpine3.10
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
-RUN npm audit fix
 EXPOSE 3000
 CMD ["npm", "start"]
