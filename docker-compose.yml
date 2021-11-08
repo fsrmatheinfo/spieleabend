@@ -26,7 +26,7 @@ services:
     ports:
     - "40005:4567"
   cards-against-humanity-server:
-    image: ghcr.io/lattyware/massivedecks/server@sha256:052fd00924b982d7a8b272d1d2ac7f788c57cd9feedf8ef67cc0a179e17a67ce
+    image: ghcr.io/lattyware/massivedecks/server@sha256:bd203a244f504d868e7355db33634b1312e5a954dd12fa4435665ce847b840f5
     restart: always
     networks:
     - cards-against-humanity
