@@ -22,7 +22,7 @@ RUN npm audit fix\
     && sh build.sh
 
 
-FROM alpine:3.11
+FROM alpine:3.14
 WORKDIR /app
 COPY --from=backend /app/main .
 COPY --from=frontend /app/frontend/dist ./frontend/dist
