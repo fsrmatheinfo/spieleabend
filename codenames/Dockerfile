@@ -13,7 +13,7 @@ RUN apk add gcc musl-dev \
     && go build ./cmd/codenames/main.go
 
 
-FROM node:12-alpine AS frontend
+FROM node:16.13.0-alpine AS frontend
 COPY --from=clone /app /app
 WORKDIR /app/frontend
 RUN npm install -g parcel-bundler \

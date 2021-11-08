@@ -6,7 +6,7 @@ RUN git checkout 33f489322a0dc02f2a283393a4266d3f89633552
 RUN rm -rf .git
 
 
-FROM node:8.17.0-slim
+FROM node:16.13.0-alpine
 EXPOSE 443
 ENV NPM_CONFIG_LOGLEVEL info
 WORKDIR /app
