@@ -11,7 +11,10 @@ EXPOSE 443
 ENV NPM_CONFIG_LOGLEVEL info
 WORKDIR /app
 COPY --from=clone /app/app/package*.json /app/
-RUN yarn install
 COPY --from=clone /app/app /app
+# Hack to replace unmaintained `uws` lib and be compatible with current node
+RUN yarn add ws
+RUN sed -i "s/require(\"uws\")/require(\"ws\")/g" src/sockets/Connection.js && \
+    sed -i "s/require(\"uws\")/require(\"ws\")/g" src/sockets/Listener.js
 RUN mkdir -p /app/settings
 CMD ["node", "cli/index.js"]
