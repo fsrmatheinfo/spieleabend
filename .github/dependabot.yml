@@ -1,0 +1,139 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/agar-io"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/agar-io/cigar"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/agar-io/ogar"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/battleship"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/catan"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/chess"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/codenames"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/kung-fu-chess"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/pictionary"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/spyfall"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "docker"
+    directory: "/werewolf"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 10
+    assignees:
+      - "heinrichreimer"
+    reviewers:
+      - "heinrichreimer"
+    ignore:
+      - update-types:
+          - "version-update:semver-minor"
+          - "version-update:semver-patch"
