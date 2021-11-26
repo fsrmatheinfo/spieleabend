@@ -81,6 +81,14 @@ services:
     restart: always
     ports:
     - "40013:5000"
+  tetris:
+    build:
+      context: tetris
+      args:
+        RED_TETRIS_SERVER: "localhost:40014"
+    restart: always
+    ports:
+      - "40014:4433"
 
 networks:
   cards-against-humanity:
