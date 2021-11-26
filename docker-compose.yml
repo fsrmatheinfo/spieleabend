@@ -53,7 +53,7 @@ services:
     - "40008:3000"
   agar-io-cigar:
     build:
-      context: agar-io/cigar
+      context: agar-io-cigar
       args:
         OGAR_SERVER: "localhost:40010"
     restart: always
@@ -62,7 +62,7 @@ services:
     ports:
     - "40009:3000"
   agar-io-ogar:
-    build: agar-io/ogar
+    build: agar-io-ogar
     restart: always
     ports:
     - "40010:443"
