@@ -134,6 +134,7 @@ updates:
     reviewers:
       - "heinrichreimer"
     ignore:
-      - update-types:
+      - dependency-name: "*"
+        update-types:
           - "version-update:semver-minor"
           - "version-update:semver-patch"
