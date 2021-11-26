@@ -1,16 +1,16 @@
-name: Build Docker Images
+name: CI
 
 on:
   push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
 
 jobs:
   build:
+    name: "🏗️ Build Docker image"
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        dockerfile_path:
+        docker-context:
           - agar-io
           - agar-io/cigar
           - agar-io/ogar
@@ -22,13 +22,28 @@ jobs:
           - pictionary
           - spyfall
           - werewolf
-    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-    - name: Build Docker image ${{matrix.dockerfile_path}}
-      uses: docker/build-push-action@v2
-      with:
-        context: ${{matrix.dockerfile_path}}
-        push: false
+      - name: "📥 Check-out"
+        uses: actions/checkout@v2
+      - name: "📄 Parse Docker metadata"
+        id: meta
+        uses: crazy-max/ghaction-docker-meta@v1
+        with:
+          images: ${{ github.repository }}
+          tag-match: "v(.*)"
+          tag-match-group: 1
+      - name: "🧰 Set up QEMU"
+        uses: docker/setup-qemu-action@v1
+      - name: "🧰 Set up Docker Buildx"
+        uses: docker/setup-buildx-action@v1
+      - name: "🚀 Build Docker image ${{matrix.docker-context}}"
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{matrix.docker-context}}
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: |
+            ${{ steps.meta.outputs.labels }}
+            org.opencontainers.image.documentation=https://github.com/${{ github.repository }}
+            org.opencontainers.image.title=Spieleabend ${{matrix.docker-context}}
+            org.opencontainers.image.description=Bundle of collaborative, open source online games.
