@@ -1,4 +1,4 @@
-FROM alpine/git:v2.26.2 AS clone
+FROM alpine/git:v2.32.0 AS clone
 RUN git config --global advice.detachedHead false
 RUN git clone https://github.com/AlecM33/Werewolf.git /app
 WORKDIR /app
@@ -6,7 +6,7 @@ RUN git checkout 0754ffffb2c2e69e00c38ebee7165603821e9b2e
 RUN rm -rf .git
 
 
-FROM node:14.15.1-stretch
+FROM node:16.13.0-alpine
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
