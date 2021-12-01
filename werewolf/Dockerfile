@@ -11,6 +11,6 @@ COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
 RUN npm audit fix
-RUN sed -i -e "/const secure = require('express-force-https');/d" -e "/app.use(secure);/d" server.js
+RUN sed -i "/const secure = require('express-force-https');/d; /app.use(secure);/d" server.js
 EXPOSE 5000
 CMD ["node", "server.js"]

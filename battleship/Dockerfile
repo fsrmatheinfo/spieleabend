@@ -9,7 +9,7 @@ RUN rm -rf .git
 FROM alpine:3.14 AS replace
 COPY --from=clone /app /app
 WORKDIR /app
-RUN sed -i "s|'https://war-vessels.herokuapp.com/play/'|window.location.href + 'play/'|g" views/pages/index.ejs
+RUN sed -i "s/'https:\/\/war-vessels.herokuapp.com\/play\/'/window.location.href + 'play\/'/g" views/pages/index.ejs
 
 
 FROM node:16.13.0-alpine
