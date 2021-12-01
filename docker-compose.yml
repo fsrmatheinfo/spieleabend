@@ -6,7 +6,7 @@ services:
     ports:
       - "40000:80"
   cards-against-humanity:
-    image: emcniece/dockeryourxyzzy:4
+    image: emcniece/dockeryourxyzzy:3
     restart: always
     ports:
       - "40001:8080"
