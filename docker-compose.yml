@@ -56,6 +56,11 @@ services:
     restart: always
     ports:
     - "40008:3000"
+  agar-io-cigar-ogar:
+    image: tianon/true
+    depends_on:
+      - agar-io-cigar
+      - agar-io-ogar
   agar-io-cigar:
     build:
       context: agar-io-cigar
