@@ -25,20 +25,25 @@ services:
     restart: always
     ports:
     - "40005:4567"
-  cards-against-humanity-server:
+  cards-against-humanity-massive-decks:
+    image: tianon/true
+    depends_on:
+      - cards-against-humanity-massive-decks-server
+      - cards-against-humanity-massive-decks-client
+  cards-against-humanity-massive-decks-server:
     image: ghcr.io/lattyware/massivedecks/server@sha256:bd203a244f504d868e7355db33634b1312e5a954dd12fa4435665ce847b840f5
     restart: always
     networks:
-    - cards-against-humanity
-  cards-against-humanity-client:
+    - cards-against-humanity-massive-decks
+  cards-against-humanity-massive-decks-client:
     image: ghcr.io/lattyware/massivedecks/client@sha256:ec81342a3fd6808c277f927450c19d233f90df164007b1d2d8a54723d1478a6e
     restart: always
     networks:
-    - cards-against-humanity
+    - cards-against-humanity-massive-decks
     links:
-      - "cards-against-humanity-server:server"
+      - "cards-against-humanity-massive-decks-server:server"
     depends_on:
-      - cards-against-humanity-server
+      - cards-against-humanity-massive-decks-server
     ports:
     - "40006:8080"
   spyfall:
@@ -91,4 +96,4 @@ services:
       - "40014:4433"
 
 networks:
-  cards-against-humanity:
+  cards-against-humanity-massive-decks:
