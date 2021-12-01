@@ -3,4 +3,16 @@ services:
   agar-io-cigar:
     build:
       args:
-        OGAR_SERVER: "HOSTNAME"
+        OGAR_SERVER: "HOSTNAME_AND_PORT"
+  tetris:
+    build:
+      args:
+        RED_TETRIS_SERVER: "HOSTNAME_AND_PORT"
+  tetris-teturisu-client:
+    build:
+      args:
+        TETURISU_SERVER: "HOSTNAME_AND_PORT"
+  tetris-battletris:
+    build:
+      args:
+        BATTLETRIS_SERVER: "HOSTNAME_AND_PORT"
