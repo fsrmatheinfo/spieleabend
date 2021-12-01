@@ -1,5 +1,10 @@
 version: '3'
 services:
+  home:
+    build: home
+    restart: always
+    ports:
+      - "40000:80"
   cards-against-humanity:
     image: emcniece/dockeryourxyzzy:4
     restart: always
