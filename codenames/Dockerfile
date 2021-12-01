@@ -13,7 +13,7 @@ RUN apk add gcc musl-dev \
     && go build ./cmd/codenames/main.go
 
 
-FROM node:16.13.0-alpine AS frontend
+FROM node:17.1.0-alpine AS frontend
 COPY --from=clone /app /app
 WORKDIR /app/frontend
 RUN apk add python3 build-base
