@@ -54,8 +54,13 @@ The games run on [ports](#games) 40001 to 40013 on `localhost`.
 - [Werewolf](https://github.com/AlecM33/Werewolf):
   [`localhost:40013`](http://localhost:40013)
   MIT License
-- [Tetris](https://github.com/Tschuck/battletris):
+- [Tetris (Red Tetris)](https://github.com/cepalle/red-tetris):
   [`localhost:40014`](http://localhost:40014)
+- [Tetris (Teturisu)](https://github.com/tarhses/teturisu):
+  [`localhost:40016`](http://localhost:40016)
+  MIT License
+- [Tetris](https://github.com/Tschuck/battletris):
+  [`localhost:40017`](http://localhost:40017)
   GPL-3.0 License
 
 If you're missing your favorite game, and a web clone is available under an open license, we're happy to accept [whishes](https://github.com/fsrmatheinfo/spieleabend/issues) and [pull requests](https://github.com/fsrmatheinfo/spieleabend/pulls).
