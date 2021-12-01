@@ -5,7 +5,7 @@ WORKDIR /app
 RUN git checkout 2df7aeafec8e0ac1af5ef2ebef7c26bd661cf671
 RUN rm -rf .git
 
-FROM node:14.15.1-stretch
+FROM node:16.13.0-alpine
 COPY --from=clone /app /app
 WORKDIR /app
 RUN yarn install
