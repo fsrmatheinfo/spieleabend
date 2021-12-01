@@ -99,6 +99,24 @@ services:
     restart: always
     ports:
       - "40014:4433"
+  tetris-teturisu:
+    image: tianon/true
+    depends_on:
+      - tetris-teturisu-server
+      - tetris-teturisu-client
+  tetris-teturisu-server:
+    build: tetris-teturisu-server
+    restart: always
+    ports:
+      - "40015:8001"
+  tetris-teturisu-client:
+    build:
+      context: tetris-teturisu-client
+      args:
+        TETURISU_SERVER: "localhost:40015"
+    restart: always
+    ports:
+      - "40016:8000"
 
 networks:
   cards-against-humanity-massive-decks:
