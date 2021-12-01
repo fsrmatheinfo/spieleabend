@@ -4,27 +4,27 @@ services:
     image: emcniece/dockeryourxyzzy:4
     restart: always
     ports:
-    - "40001:8080"
+      - "40001:8080"
   pictionary:
     build: pictionary
     restart: always
     ports:
-    - "40002:8080"
+      - "40002:8080"
   battleship:
     build: battleship
     restart: always
     ports:
-    - "40003:5000"
+      - "40003:5000"
   chess:
     build: chess
     restart: always
     ports:
-    - "40004:8080"
+      - "40004:8080"
   catan:
     build: catan
     restart: always
     ports:
-    - "40005:4567"
+      - "40005:4567"
   cards-against-humanity-massive-decks:
     image: tianon/true
     depends_on:
@@ -34,28 +34,28 @@ services:
     image: ghcr.io/lattyware/massivedecks/server@sha256:bd203a244f504d868e7355db33634b1312e5a954dd12fa4435665ce847b840f5
     restart: always
     networks:
-    - cards-against-humanity-massive-decks
+      - cards-against-humanity-massive-decks
   cards-against-humanity-massive-decks-client:
     image: ghcr.io/lattyware/massivedecks/client@sha256:ec81342a3fd6808c277f927450c19d233f90df164007b1d2d8a54723d1478a6e
     restart: always
     networks:
-    - cards-against-humanity-massive-decks
+      - cards-against-humanity-massive-decks
     links:
       - "cards-against-humanity-massive-decks-server:server"
     depends_on:
       - cards-against-humanity-massive-decks-server
     ports:
-    - "40006:8080"
+      - "40006:8080"
   spyfall:
     build: spyfall
     restart: always
     ports:
-    - "40007:3000"
+      - "40007:3000"
   agar-io:
     build: agar-io
     restart: always
     ports:
-    - "40008:3000"
+      - "40008:3000"
   agar-io-cigar-ogar:
     image: tianon/true
     depends_on:
@@ -70,27 +70,27 @@ services:
     depends_on:
       - agar-io-ogar
     ports:
-    - "40009:3000"
+      - "40009:3000"
   agar-io-ogar:
     build: agar-io-ogar
     restart: always
     ports:
-    - "40010:443"
+      - "40010:443"
   kung-fu-chess:
     build: kung-fu-chess
     restart: always
     ports:
-    - "40011:8080"
+      - "40011:8080"
   codenames:
     build: codenames
     restart: always
     ports:
-    - "40012:9091"
+      - "40012:9091"
   werewolf:
     build: werewolf
     restart: always
     ports:
-    - "40013:5000"
+      - "40013:5000"
   tetris:
     build:
       context: tetris
