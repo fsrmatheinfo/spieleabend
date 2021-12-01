@@ -6,7 +6,8 @@ RUN git checkout 8c8d26cff0d6c3c37d432a11443281139c74de3a
 RUN rm -rf .git
 
 
-FROM node:16.13.0-alpine
+# The game depends on Node 'primordials', which don't seem to be supported by modern node versions.
+FROM node:10.23.0-alpine
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
