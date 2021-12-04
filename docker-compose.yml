@@ -96,9 +96,9 @@ services:
     restart: always
     ports:
       - "40013:5000"
-  tetris:
+  tetris-red-tetris:
     build:
-      context: tetris
+      context: tetris-red-tetris
       args:
         RED_TETRIS_SERVER: "localhost:40014"
     restart: always

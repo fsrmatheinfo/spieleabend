@@ -12,15 +12,21 @@ jobs:
       matrix:
         docker-context:
           - agar-io
-          - agar-io/cigar
-          - agar-io/ogar
+          - agar-io-cigar
+          - agar-io-ogar
           - battleship
+          - cards-against-humanity-pretend-youre-xyzzy
           - catan
           - chess
           - codenames
+          - home
           - kung-fu-chess
           - pictionary
           - spyfall
+          - tetris-battletris
+          - tetris-red-tetris
+          - tetris-teturisu-client
+          - tetris-teturisu-server
           - werewolf
     steps:
       - name: "📥 Check-out"
