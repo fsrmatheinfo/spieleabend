@@ -59,7 +59,7 @@ The games run on [ports](#games) 40001 to 40013 on `localhost`.
 - [Tetris (Teturisu)](https://github.com/tarhses/teturisu):
   [`localhost:40016`](http://localhost:40016)
   MIT License
-- [Tetris](https://github.com/Tschuck/battletris):
+- [Tetris (Battletris)](https://github.com/Tschuck/battletris):
   [`localhost:40017`](http://localhost:40017)
   GPL-3.0 License
 
