@@ -18,6 +18,7 @@ RUN sed -i "s/\"target\": \"esnext\"/\"target\": \"es2019\"/g" frontend/tsconfig
 # Update server.
 ARG BATTLETRIS_SERVER="localhost:4433"
 RUN sed -i "s/https:\/\/battletris.de/http:\/\/$BATTLETRIS_SERVER/g; s/wss:\/\/battletris.de/ws:\/\/$BATTLETRIS_SERVER/g" frontend/.env.production
+RUN sed -i "s/localhost/$BATTLETRIS_SERVER/g" backend/src/lib/config.ts
 RUN yarn deploy
 
 
