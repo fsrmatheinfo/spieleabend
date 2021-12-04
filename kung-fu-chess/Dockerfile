@@ -6,7 +6,7 @@ RUN git checkout a24c109af441454b1c678e9906f31cec9ba56b7b
 RUN rm -rf .git
 
 
-FROM python:3.6.12-slim
+FROM python:3.10.0-slim
 WORKDIR /app
 EXPOSE 8080
 ENV POETRY_VERSION=1.0.0
