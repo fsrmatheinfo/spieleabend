@@ -12,8 +12,7 @@ The games run on [ports](#games) 40001 to 40013 on `localhost`.
 
 ## Games
 
-- [Cards Against Humanity](https://github.com/emcniece/DockerYourXyzzy)
-  <small> (Pretend You're Xyzzy) </small>:
+- [Cards Against Humanity (Pretend You're Xyzzy)](https://github.com/emcniece/DockerYourXyzzy):
   [`localhost:40001`](http://localhost:40001)
   BSD-2-Clause License
 - [Pictionary](https://github.com/scribble-rs/scribble.rs):
@@ -27,23 +26,19 @@ The games run on [ports](#games) 40001 to 40013 on `localhost`.
   MIT License
 - [Settlers of Catan](https://github.com/seansegal/tincisnotcatan):
   [`localhost:40005`](http://localhost:40005)
-- [Cards Against Humanity](https://github.com/lattyware/massivedecks)
-  <small> (Massive Decks) </small>:
+- [Cards Against Humanity (Massive Decks)](https://github.com/lattyware/massivedecks):
   [`localhost:40006`](http://localhost:40006)
   AGPL-3.0 License
 - [Spyfall](https://github.com/tannerkrewson/spyfall):
   [`localhost:40007`](http://localhost:40007)
   MIT License
-- [Agar.io](https://github.com/huytd/agar.io-clone)
-  <small> (Open Agar) </small>:
+- [Agar.io (Open Agar)](https://github.com/huytd/agar.io-clone):
   [`localhost:40008`](http://localhost:40008)
   MIT License
-- [Agar.io client](https://github.com/opcon/Cigar2)
-  <small> (Cigar2) </small>:
+- [Agar.io client (Cigar2)](https://github.com/opcon/Cigar2):
   [`localhost:40009`](http://localhost:40009)
   ISC License
-- [Agar.io server](https://github.com/opcon/OgarII)
-  <small> (OgarII) </small>:
+- [Agar.io server (OgarII)](https://github.com/opcon/OgarII):
   [`localhost:40010`](http://localhost:40010)
   Apache License 2.0
 - [Kung-Fu Chess](https://github.com/PetterS/realtimechess):
@@ -56,7 +51,10 @@ The games run on [ports](#games) 40001 to 40013 on `localhost`.
   MIT License
 - [Tetris (Red Tetris)](https://github.com/cepalle/red-tetris):
   [`localhost:40014`](http://localhost:40014)
-- [Tetris (Teturisu)](https://github.com/tarhses/teturisu):
+- [Tetris (Teturisu) server](https://github.com/tarhses/teturisu):
+  [`localhost:40016`](http://localhost:40015)
+  MIT License
+- [Tetris (Teturisu) client](https://github.com/tarhses/teturisu):
   [`localhost:40016`](http://localhost:40016)
   MIT License
 - [Tetris (Battletris)](https://github.com/Tschuck/battletris):
