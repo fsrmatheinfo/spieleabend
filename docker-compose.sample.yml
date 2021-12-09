@@ -4,10 +4,6 @@ services:
     build:
       args:
         OGAR_SERVER: "HOSTNAME_AND_PORT"
-  tetris-red-tetris:
-    build:
-      args:
-        RED_TETRIS_SERVER: "HOSTNAME_AND_PORT"
   tetris-teturisu-client:
     build:
       args:

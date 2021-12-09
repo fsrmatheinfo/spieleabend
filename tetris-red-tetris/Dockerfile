@@ -10,7 +10,7 @@ FROM node:16.13.0-alpine AS build
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
-ARG RED_TETRIS_SERVER="localhost:4433"
-RUN sed -i "s/localhost:4433/$RED_TETRIS_SERVER/g" src/client/redux/reducer.ts
+RUN sed -i "s/(SOCKET_URL)/(window.location.origin)/g; /SOCKET_URL/d" src/client/redux/reducer.ts
+RUN cat src/client/redux/reducer.ts
 EXPOSE 4433
 CMD ["npm", "run", "srv-dist"]

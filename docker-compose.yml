@@ -97,10 +97,7 @@ services:
     ports:
       - "40013:5000"
   tetris-red-tetris:
-    build:
-      context: tetris-red-tetris
-      args:
-        RED_TETRIS_SERVER: "localhost:40014"
+    build: tetris-red-tetris
     restart: always
     ports:
       - "40014:4433"
@@ -123,8 +120,7 @@ services:
     ports:
       - "40016:8000"
   tetris-battletris:
-    build:
-      context: tetris-battletris
+    build: tetris-battletris
     restart: always
     ports:
       - "40017:2020"

@@ -8,7 +8,7 @@ To start all game servers simply run:
 ```shell script
 docker-compose up -d
 ```
-The games run on [ports](#games) 40001 to 40013 on `localhost`.
+The games run on [ports](#games) 40001 to 40017 on `localhost`.
 
 ## Games
 
