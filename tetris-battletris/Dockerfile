@@ -11,10 +11,6 @@ WORKDIR /app
 RUN yarn install
 # Fix deprecated types.
 RUN sed -i "s/Record<string, string>/Record<string, string | string[]>/g" backend/src/server/RoomHandler.ts
-# Refresh browser data.
-RUN cd frontend && npx browserslist@latest --update-db
-# Update frontend build target.
-RUN sed -i "s/\"target\": \"esnext\"/\"target\": \"es2019\"/g" frontend/tsconfig.json
 # Unconfigure server URLs.
 RUN sed -i "s/config.serverUrl/window.location.origin/g" frontend/src/lib/request.ts
 RUN sed -i "s/config.wsUrl/window.location.origin.replace(\/^https\/, 'wss').replace(\/^http\/, 'ws')/g" frontend/src/lib/WsConnection.ts
