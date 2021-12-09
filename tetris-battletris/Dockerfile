@@ -14,7 +14,7 @@ RUN sed -i "s/Record<string, string>/Record<string, string | string[]>/g" backen
 # Unconfigure server URLs.
 RUN sed -i "s/config.serverUrl/window.location.origin/g" frontend/src/lib/request.ts
 RUN sed -i "s/config.wsUrl/window.location.origin.replace(\/^https\/, 'wss').replace(\/^http\/, 'ws')/g" frontend/src/lib/WsConnection.ts
-RUN sed -i "s/config.frontendUrl/false/g" backend/src/server/plugins.ts
+RUN sed -i "s/config.frontendUrl/true/g" backend/src/server/plugins.ts
 RUN yarn deploy
 
 
