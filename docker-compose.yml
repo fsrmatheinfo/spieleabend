@@ -125,8 +125,6 @@ services:
   tetris-battletris:
     build:
       context: tetris-battletris
-      args:
-        BATTLETRIS_SERVER: "localhost:40017"
     restart: always
     ports:
       - "40017:2020"

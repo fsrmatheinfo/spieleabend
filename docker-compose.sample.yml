@@ -12,7 +12,3 @@ services:
     build:
       args:
         TETURISU_SERVER: "HOSTNAME_AND_PORT"
-  tetris-battletris:
-    build:
-      args:
-        BATTLETRIS_SERVER: "HOSTNAME_AND_PORT"
