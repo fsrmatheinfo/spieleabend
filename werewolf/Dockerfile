@@ -6,7 +6,7 @@ RUN git checkout 0754ffffb2c2e69e00c38ebee7165603821e9b2e
 RUN rm -rf .git
 
 
-FROM node:16.13.0-alpine
+FROM node:17.3.1-alpine
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
