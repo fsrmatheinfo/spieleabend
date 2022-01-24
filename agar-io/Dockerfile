@@ -7,7 +7,7 @@ RUN rm -rf .git
 
 
 # The game depends on Node 'primordials', which don't seem to be supported by modern node versions.
-FROM node:10.23.0-alpine
+FROM node:17.4.0-alpine
 COPY --from=clone /app /app
 WORKDIR /app
 RUN npm install
