@@ -12,7 +12,7 @@ WORKDIR /app
 RUN sed -i "s/'https:\/\/war-vessels.herokuapp.com\/play\/'/window.location.href + 'play\/'/g" views/pages/index.ejs
 
 
-FROM node:16.13.0-alpine
+FROM node:17.6.0-alpine
 COPY --from=replace /app /app
 WORKDIR /app
 RUN npm install
