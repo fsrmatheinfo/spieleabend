@@ -30,7 +30,7 @@ jobs:
           - werewolf
     steps:
       - name: "📥 Check-out"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: "📄 Parse Docker metadata"
         id: meta
         uses: crazy-max/ghaction-docker-meta@v3.6.2
