@@ -22,7 +22,7 @@ RUN npm install -g parcel-bundler \
     && sh build.sh
 
 
-FROM alpine:3.14
+FROM alpine:3.15.2
 WORKDIR /app
 COPY --from=backend /app/main .
 COPY --from=frontend /app/frontend/dist ./frontend/dist
