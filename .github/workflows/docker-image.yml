@@ -39,7 +39,7 @@ jobs:
           tag-match: "v(.*)"
           tag-match-group: 1
       - name: "🧰 Set up QEMU"
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v2
       - name: "🧰 Set up Docker Buildx"
         uses: docker/setup-buildx-action@v1
       - name: "🚀 Build Docker image ${{matrix.docker-context}}"
