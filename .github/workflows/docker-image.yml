@@ -43,7 +43,7 @@ jobs:
       - name: "🧰 Set up Docker Buildx"
         uses: docker/setup-buildx-action@v1
       - name: "🚀 Build Docker image ${{matrix.docker-context}}"
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: ${{matrix.docker-context}}
           push: false
