@@ -6,7 +6,7 @@ RUN git checkout 7a9e71315d21df3d91aaf6d818865dda52ca12f2
 RUN rm -rf .git
 
 
-FROM alpine:3.14 AS replace
+FROM alpine:3.16.0 AS replace
 COPY --from=clone /app /app
 WORKDIR /app
 RUN sed -i "s/'https:\/\/war-vessels.herokuapp.com\/play\/'/window.location.href + 'play\/'/g" views/pages/index.ejs
