@@ -6,7 +6,7 @@ RUN git checkout dbee097162d1afd477089086a56b076dcdb89dca
 RUN rm -rf .git
 
 
-FROM alpine:3.14
+FROM alpine:3.16.0
 RUN apk update && apk fetch openjdk8 && apk add openjdk8 bash maven
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 COPY --from=clone /app /app
