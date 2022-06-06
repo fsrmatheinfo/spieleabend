@@ -6,7 +6,7 @@ RUN git checkout 3e8db4bb4682fea113dd6421f7f1e83c7f0bf2c8
 RUN rm -rf .git
 
 
-FROM golang:1.17-alpine AS backend
+FROM golang:1.18.3-alpine AS backend
 COPY --from=clone /app /app
 WORKDIR /app
 RUN apk add gcc musl-dev \
